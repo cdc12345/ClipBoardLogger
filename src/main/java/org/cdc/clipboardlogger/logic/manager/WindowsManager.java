@@ -12,7 +12,7 @@ public class WindowsManager {
     /**
      * 贴边隐藏
      */
-    public static void HideWindows(){
+    public static void HideWindow(){
         ClipBoardLogger jf=ClipBoardLogger.getInstance();
         Point p = jf.getLocation();
         int frameWidth = jf.getWidth();
@@ -55,5 +55,11 @@ public class WindowsManager {
         }
         Logger.getGlobal().info("调用了隐藏显示api,返回结果为false");
         return false;
+    }
+    public static void buildWindow() throws Exception {
+        ClipBoardLogger clpd = new ClipBoardLogger();
+        clpd.init();
+        clpd.setVisible(true);
+        HideWindow();
     }
 }
