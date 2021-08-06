@@ -5,6 +5,7 @@ import org.cdc.clipboardlogger.logic.eventcreator.EventCreator;
 import org.cdc.clipboardlogger.logic.eventcreator.MouseEventCreator;
 import org.cdc.clipboardlogger.logic.listener.ClipBoardLoggerMouseMotionListener;
 import org.cdc.clipboardlogger.logic.manager.ProcessManager;
+import org.cdc.clipboardlogger.logic.manager.WindowsManager;
 
 import javax.swing.*;
 import java.util.logging.Logger;
@@ -24,7 +25,7 @@ public class Main {
                 System.exit(0);
             }
             Logger.getGlobal().info("检测完毕");
-            new ClipBoardLogger();
+            WindowsManager.buildWindow();
             EventRun();
             Logger.getGlobal().info("初始化完毕,正在关闭初始化进程");
         } catch (Exception e) {

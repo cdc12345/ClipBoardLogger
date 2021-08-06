@@ -20,7 +20,7 @@ public class ClipBoardLoggerMouseMotionListener implements CustomMouseEvent {
         Logger.getGlobal().info(" Û±Í“∆∂Øº‡Ã˝");
         if (MouseManager.isMouseInTheWindowArea()){
             WindowsManager.ShowWindow();
-        } else WindowsManager.HideWindows();
+        } else WindowsManager.HideWindow();
     }
 
     @Override
@@ -28,6 +28,6 @@ public class ClipBoardLoggerMouseMotionListener implements CustomMouseEvent {
         Logger.getGlobal().info(" Û±Í“∆∂Øº‡Ã˝");
         if (MouseManager.isMouseInTheWindowArea()){
             WindowsManager.ShowWindow();
-        } else WindowsManager.HideWindows();
+        } else WindowsManager.HideWindow();
     }
 }

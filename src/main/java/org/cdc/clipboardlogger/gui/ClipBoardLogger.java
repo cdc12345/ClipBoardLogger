@@ -43,20 +43,17 @@ public class ClipBoardLogger extends JFrame {
 		instance = this;
 		special = new HashMap<>();
 		clp = Toolkit.getDefaultToolkit().getSystemClipboard();
-		init();
 	}
 
 	/**
 	 * 初始化
 	 * @throws Exception 一堆
 	 */
-	private void init() throws Exception {
+	public void init() throws Exception {
 		clp.setContents(clp.getContents(null),ClipBoardManager.getInstance());
 		Image img= getIconImageFromDirectory();
 		Logger.getGlobal().info("图标设置完毕,开始构建窗口");
 		buildWindow(img);
-		setVisible(true);
-		WindowsManager.HideWindows();
 	}
 	/**
 	 * 构建窗口
