@@ -14,6 +14,15 @@ import java.util.logging.Logger;
  * 进程管理
  */
 public class ProcessManager {
+	public static void processCheck() throws IOException, URISyntaxException, MonitorException {
+		Logger.getGlobal().info("正在检测本程序是否已经存在进程");
+		if (ProcessManager.checkExist()) {
+			JOptionPane.showMessageDialog(null, "程序已经运行，无法多开");
+			Logger.getGlobal().warning("程序已经存在进程,退出程序");
+			System.exit(0);
+		}
+		Logger.getGlobal().info("检测完毕,确定运行");
+	}
 	public static boolean checkExist() throws IOException, URISyntaxException, MonitorException {
 		 if (checkFileExist()) return false;
 		return !checkProcessExist();
