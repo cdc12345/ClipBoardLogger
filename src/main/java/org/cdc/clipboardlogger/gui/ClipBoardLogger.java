@@ -56,7 +56,7 @@ public class ClipBoardLogger extends JFrame {
 		Logger.getGlobal().info("图标设置完毕,开始构建窗口");
 		buildWindow(img);
 		setVisible(true);
-		WindowsManager.HideWindows();
+		WindowsManager.HideWindow();
 	}
 	/**
 	 * 构建窗口
